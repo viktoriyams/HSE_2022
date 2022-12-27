@@ -14,12 +14,11 @@ parser.add_argument('--prediction_model', dest='model', type=str, nargs=1,
 parser.add_argument('--prediction_params', dest='params', type=str, nargs=1,
                     help='input parameters for the model')
 args = parser.parse_args()
-logging.info(f'Model {args.model[0]}')
+
 model = args.model[0].split(",")
 params = np.reshape(list(map(float, args.params[0].split(','))), (1, -1))
 
 df = get_df()
-
 X_train, X_test, y_train, y_test = my_train_test_split(df)
 
 for i in model:
