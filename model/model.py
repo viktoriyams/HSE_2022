@@ -37,7 +37,7 @@ def fit_KNeighborsClassifier(X_train, y_train):
     pickle.dump(neigh, f)
     f.close()
     return neigh
-
+#new comment to test git
 def get_df():
     logging.info(f'Extract dataset from {settings.DATA.data_set}')
     df = get_data(settings.DATA.data_set)
