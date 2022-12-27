@@ -1,8 +1,8 @@
 import pickle
 
 from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.neighbors import KNeighborsClassifier
+"""from sklearn.neighbors import KNeighborsRegressor
+from sklearn.neighbors import KNeighborsClassifier"""
 
 
 from conf.conf import logging, settings
@@ -21,7 +21,7 @@ def my_train_test_split(df):
                                                         )
     return X_train.values, X_test.values, y_train.values, y_test.values
 
-
+"""
 def fit_KNeighborsRegressor(X_train, y_train):
     logging.info('Train KNeighborsRegressor model')
     neigh = KNeighborsRegressor(n_neighbors=2).fit(X_train, y_train)
@@ -36,7 +36,7 @@ def fit_KNeighborsClassifier(X_train, y_train):
     f = open('model/NearestNeighbors.pkl', 'wb')
     pickle.dump(neigh, f)
     f.close()
-    return neigh
+    return neigh"""
 
 def get_df():
     logging.info(f'Extract dataset from {settings.DATA.data_set}')
